@@ -1,0 +1,8 @@
+# VS code history folder
+.history/
+#  node_modules folder
+node_modules/
+#  dist folder us a build folder
+dist/
+# package-lock file
+package-lock.json
