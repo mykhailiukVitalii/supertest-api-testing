@@ -1,9 +1,10 @@
 import { StatusCodes } from 'http-status-codes';
-import { client } from '../../base/ClientBO';
+import supertest = require('supertest');
 
 describe('Sample example', function () {
     it('/GET - All books', async () => {
-        const response = await client()
+        //No using the Base class
+        const response = await supertest("https://fakerestapi.azurewebsites.net/api/v1")
             .get('/books')
             .expect(StatusCodes.OK);
         // console.log("Response length: ", response.body.length)
